@@ -1,3 +1,8 @@
+import styles from './index.module.scss';
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <h1 className={styles.header}>Ti</h1>
+    </>
+  );
 }
