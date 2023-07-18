@@ -4,5 +4,16 @@
   "singleQuote": true,
   "bracketSpacing": true,
   "bracketSameLine": false,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "importOrder": [
+    "react",
+    "<THIRD_PARTY_MODULES>",
+    "^@/styles/(.*)$",
+    "^@/assets/(.*)$",
+    "^@/components/(.*)$",
+    "^@/(.*)$",
+    "^[./]",
+    "^[../]"
+  ]
 }
