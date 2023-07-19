@@ -1,10 +1,10 @@
-import styles from './index.module.scss';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { HomePage } from '@/components/templates/HomePage/HomePage';
 export default function Home() {
   return (
     <>
-      <h1 className={styles.header}>Index</h1>
+      <HomePage />
     </>
   );
 }
