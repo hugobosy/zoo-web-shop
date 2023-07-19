@@ -1,5 +1,5 @@
-import { FC, HTMLProps } from 'react';
-import {
+import type { FC, HTMLProps } from 'react';
+import type {
   As,
   Colors,
   Fonts,
