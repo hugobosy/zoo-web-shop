@@ -16,3 +16,41 @@
     @include extraBold;
   }
 }
+
+.size {
+  &-3xs {
+    @include superExtraSmall
+  }
+
+  &-2xs {
+    @include extraSmall
+  }
+
+  &-xs {
+    @include small
+  }
+
+  &-sm {
+    @include base
+  }
+
+  &-md {
+    @include medium
+  }
+
+  &-lg {
+    @include large
+  }
+
+  &-xl {
+    @include extraLarge
+  }
+
+  &-2xl {
+    @include superExtraLarge
+  }
+
+  &-3xl {
+    @include megaLarge
+  }
+}
