@@ -1,3 +1,5 @@
+import { Typography } from '@/components/base/typography/Typography';
+
 export const HomePage = () => {
-  return <h1>Home</h1>;
+  return <Typography as="h1" text="Naglowek" />;
 };
