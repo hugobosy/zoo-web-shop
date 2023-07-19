@@ -22,13 +22,13 @@ interface TypographyProps extends HTMLProps<HTMLParagraphElement> {
 }
 
 export const Typography: FC<TypographyProps> = ({
-  as,
+  as = 'p',
   text,
-  color,
+  color = 'black',
   className,
   isUppercase,
-  capitalization,
-  weight,
+  capitalization = 'base',
+  weight = '400',
   font,
 }) => {
   const T = as;
