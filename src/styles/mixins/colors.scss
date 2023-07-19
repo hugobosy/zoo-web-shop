@@ -1,0 +1,51 @@
+@mixin black {
+  color: var(--color-black)
+}
+
+@mixin white {
+  color: var(--color-white)
+}
+
+@mixin green {
+  color: var(--color-green)
+}
+
+@mixin red {
+  color: var(--color-red)
+}
+
+@mixin gray-100 {
+  color: var(--color-gray-100)
+}
+
+@mixin gray-200 {
+  color: var(--color-gray-200)
+}
+
+@mixin gray-300 {
+  color: var(--color-gray-300)
+}
+
+@mixin gray-400 {
+  color: var(--color-gray-400)
+}
+
+@mixin gray-500 {
+  color: var(--color-gray-500)
+}
+
+@mixin gray-600 {
+  color: var(--color-gray-600)
+}
+
+@mixin gray-700 {
+  color: var(--color-gray-700)
+}
+
+@mixin gray-800 {
+  color: var(--color-gray-800)
+}
+
+@mixin gray-900 {
+  color: var(--color-gray-900)
+}
