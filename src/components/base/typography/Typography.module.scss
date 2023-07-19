@@ -1,17 +1,22 @@
 @import '@/styles/common';
+
 .weight {
   &-300 {
     @include thin;
   }
+
   &-400 {
     @include regular;
   }
+
   &-500 {
     @include semiBold;
   }
+
   &-600 {
     @include bold;
   }
+
   &-700 {
     @include extraBold;
   }
@@ -52,5 +57,59 @@
 
   &-3xl {
     @include megaLarge
+  }
+}
+
+.color {
+  &-black {
+    @include black
+  }
+
+  &-white {
+    @include white
+  }
+
+  &-green {
+    @include green
+  }
+
+  &-red {
+    @include red
+  }
+
+  &-gray-100 {
+    @include gray-100
+  }
+
+  &-gray-200 {
+    @include gray-200
+  }
+
+  &-gray-300 {
+    @include gray-300
+  }
+
+  &-gray-400 {
+    @include gray-400
+  }
+
+  &-gray-500 {
+    @include gray-500
+  }
+
+  &-gray-600 {
+    @include gray-600
+  }
+
+  &-gray-700 {
+    @include gray-700
+  }
+
+  &-gray-800 {
+    @include gray-800
+  }
+
+  &-gray-900 {
+    @include gray-900
   }
 }
