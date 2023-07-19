@@ -4,7 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 export default function Home() {
   return (
     <>
-      <h1 className={styles.header}></h1>
+      <h1 className={styles.header}>Index</h1>
     </>
   );
 }
