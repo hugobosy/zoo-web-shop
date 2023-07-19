@@ -1,0 +1,21 @@
+// FONT WEIGHT
+
+@mixin thin {
+  font-weight: var(--font-thin);
+}
+
+@mixin regular {
+  font-weight: var(--font-regular);
+}
+
+@mixin semiBold {
+  font-weight: var(--font-semi-bold);
+}
+
+@mixin bold {
+  font-weight: var(--font-bold);
+}
+
+@mixin extraBold {
+  font-weight: var(--font-extra-bold);
+}

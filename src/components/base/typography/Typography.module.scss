@@ -1,0 +1,18 @@
+@import '@/styles/common';
+.weight {
+  &-300 {
+    @include thin;
+  }
+  &-400 {
+    @include regular;
+  }
+  &-500 {
+    @include semiBold;
+  }
+  &-600 {
+    @include bold;
+  }
+  &-700 {
+    @include extraBold;
+  }
+}
