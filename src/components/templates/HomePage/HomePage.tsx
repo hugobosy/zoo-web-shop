@@ -1,13 +1,6 @@
 import { Typography } from '@/components/base/typography/Typography';
+import { Button } from '@/components/base/button/Button';
 
 export const HomePage = () => {
-  return (
-    <Typography
-      as="h1"
-      text="Naglowek"
-      weight="700"
-      capitalization="3xl"
-      color="green"
-    />
-  );
+  return <Button text="Text" href="lala" />;
 };
