@@ -1,0 +1,124 @@
+@import "@/styles/common";
+
+.button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.variant {
+  &-circled {
+    &.color {
+      &-transparent {
+        background-color: transparent;
+      }
+
+      &-red {
+        background-color: var(--color-red);
+        color: var(--color-white);
+      }
+
+      &-green {
+        background-color: var(--color-green);
+        color: var(--color-white);
+      }
+
+      &-light-gray {
+        background-color: var(--color-gray-800);
+        color: var(--color-white);
+      }
+    }
+
+    &.textColor {
+      &-black {
+        color: var(--color-black);
+      }
+
+      &-white {
+        color: var(--color-white);
+      }
+
+      &-red {
+        color: var(--color-red);
+      }
+
+      &-green {
+        color: var(--color-green);
+      }
+    }
+  }
+  &-outlined {
+    &.color {
+      &-red {
+        border: 1px solid var(--color-red);
+        color: var(--color-red);
+        transition: .3s;
+
+        &:hover {
+          background-color: var(--color-red);
+          color: var(--color-white);
+        }
+      }
+
+      &-green {
+        border: 1px solid var(--color-green);
+        color: var(--color-green);
+        transition: .3s;
+
+        &:hover {
+          background-color: var(--color-green);
+          color: var(--color-white);
+        }
+      }
+
+      &-light-gray {
+        border: 1px solid var(--color-gray-800);
+        color: var(--color-gray-800);
+        transition: .3s;
+
+        &:hover {
+          background-color: var(--color-gray-800);
+          color: var(--color-white);
+        }
+      }
+    }
+
+    &.textColor {
+      &-black {
+        color: var(--color-black);
+      }
+
+      &-white {
+        color: var(--color-white);
+      }
+
+      &-red {
+        color: var(--color-red);
+      }
+
+      &-green {
+        color: var(--color-green);
+      }
+    }
+  }
+}
+
+.textColor {
+  &-black {
+    color: var(--color-black);
+  }
+
+  &-white {
+    color: var(--color-white);
+  }
+
+  &-red {
+    color: var(--color-red);
+  }
+
+  &-green {
+    color: var(--color-green);
+  }
+}
