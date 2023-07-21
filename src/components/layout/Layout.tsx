@@ -8,10 +8,10 @@ interface LayoutProps extends ComponentPropsWithoutRef<'div'> {}
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <>
+    <div className={styles.container}>
       <Header />
       <Main>{children}</Main>
       <Footer />
-    </>
+    </div>
   );
 };

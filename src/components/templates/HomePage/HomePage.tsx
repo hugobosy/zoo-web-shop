@@ -1,13 +1,10 @@
 import { Typography } from '@/components/base/typography/Typography';
+import { Layout } from '@/components/layout/Layout';
 
 export const HomePage = () => {
   return (
-    <Typography
-      as="h1"
-      text="Naglowek"
-      weight="700"
-      capitalization="3xl"
-      color="green"
-    />
+    <Layout>
+      <h1>Main</h1>
+    </Layout>
   );
 };
