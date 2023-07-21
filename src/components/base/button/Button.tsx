@@ -7,7 +7,7 @@ interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   text: string;
   variant?: 'circled' | 'outlined' | 'square' | 'link';
-  bgColor?: 'transparent';
+  color?: 'transparent' | 'red' | 'light-gray' | 'green';
   textColor?: 'black' | 'white' | 'green' | 'red';
   textStyle?: 'normal' | 'italic' | 'bold' | 'underline';
   href?: string;
@@ -18,16 +18,17 @@ export const Button: FC<ButtonProps> = ({
   text,
   variant = 'circled',
   className,
-  textColor = 'black',
-  bgColor = 'transparent',
+  textColor,
+  color = 'transparent',
   textStyle = 'normal',
   href,
   disabled,
   ...rest
 }) => {
   const classes = classNames(
+    styles.button,
     styles[`variant-${variant}`],
-    styles[`bgColor-${bgColor}`],
+    styles[`color-${color}`],
     styles[`textColor-${textColor}`],
     styles[`textStyle-${textStyle}`],
     className,
