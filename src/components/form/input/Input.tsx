@@ -9,6 +9,7 @@ export interface InputProps
   required?: boolean;
   message?: string;
   type?: 'text' | 'email' | 'password';
+  state?: string;
 }
 export const Input: FC<InputProps> = ({
   label,
