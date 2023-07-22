@@ -5,19 +5,22 @@ import dogLogo from '@/assets/image/logo-dog.png';
 import { useTranslation } from 'next-i18next';
 import { Button } from '@/components/base/button/Button';
 import { PROJECT_URL } from '@/const/project-url';
+import { Input } from '@/components/form/input/Input';
 
 export const Header = () => {
   const { t } = useTranslation('header');
   return (
-    <>
-      <div className={styles.bar}></div>
+    <div className={styles.wrapper}>
+      <div className={styles.bar}>
+        <p>Bar</p>
+      </div>
       <div className={styles.header}>
         <div className={styles['header-logo']}>
           <Image src={nameLogo} alt="Lakrama" width={200} height={100} />
           <Image src={dogLogo} alt="Lakrama" width={200} height={100} />
         </div>
-        <div>
-          <input type="search" placeholder={t('search-placeholder')} />
+        <div className={styles.search}>
+          <Input placeholder={t('search-product')} />
         </div>
         <div>
           <div>
@@ -32,7 +35,9 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <div className={styles.menu}></div>
-    </>
+      <div className={styles.menu}>
+        <p>Menu</p>
+      </div>
+    </div>
   );
 };
