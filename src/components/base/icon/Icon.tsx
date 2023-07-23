@@ -1,4 +1,4 @@
-import { ComponentProps, FC, useMemo } from 'react';
+import React, { ComponentProps, FC, JSX, useMemo } from 'react';
 import { icons } from '@/components/base/icon/icon.const';
 
 export type IconNames = keyof typeof icons;

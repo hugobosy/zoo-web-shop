@@ -2,6 +2,7 @@ import styles from './Input.module.scss';
 import { FC, InputHTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { Typography } from '@/components/base/typography/Typography';
+import { Icon, IconNames } from '@/components/base/icon/Icon';
 
 export interface InputProps
   extends InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
@@ -10,6 +11,7 @@ export interface InputProps
   message?: string;
   type?: 'text' | 'email' | 'password';
   state?: string;
+  icon?: IconNames;
 }
 export const Input: FC<InputProps> = ({
   label,
@@ -17,6 +19,7 @@ export const Input: FC<InputProps> = ({
   message,
   className,
   type,
+  icon,
   ...rest
 }) => {
   return (
@@ -37,6 +40,7 @@ export const Input: FC<InputProps> = ({
         className={styles.input}
         {...rest}
       />
+      {icon && <Icon name={icon} className={styles.icon} />}
     </div>
   );
 };

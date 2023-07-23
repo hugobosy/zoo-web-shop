@@ -1,4 +1,3 @@
-import { Typography } from '@/components/base/typography/Typography';
 import { Layout } from '@/components/layout/Layout';
 import { Input } from '@/components/form/input/Input';
 

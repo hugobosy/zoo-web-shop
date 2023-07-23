@@ -1,5 +1,6 @@
 @import '@/styles/common';
 .inputWrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -27,4 +28,12 @@
   &:focus {
     border: 1px solid var(--color-gray-500)
   }
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
