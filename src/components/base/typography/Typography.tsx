@@ -9,7 +9,7 @@ import type {
 import classNames from 'classnames';
 
 import styles from './Typography.module.scss';
-import { IconNames } from '@/components/base/icon/Icon';
+import { Icon, IconNames } from '@/components/base/icon/Icon';
 
 interface TypographyProps extends HTMLProps<HTMLParagraphElement> {
   as: As;
@@ -46,7 +46,7 @@ export const Typography: FC<TypographyProps> = ({
         className,
       )}
     >
-      {icon} {text}
+      {icon && <Icon name={icon} />} {text}
     </T>
   );
 };
