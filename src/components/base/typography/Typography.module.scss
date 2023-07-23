@@ -113,3 +113,13 @@
     @include gray-900
   }
 }
+
+.font {
+  &-roboto {
+    @include roboto
+  }
+
+  &-ptSans {
+    @include ptSans
+  }
+}

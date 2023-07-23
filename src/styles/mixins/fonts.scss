@@ -63,3 +63,13 @@
 @mixin fontColor($color) {
   color: $color;
 }
+
+// FONT FAMILY
+
+@mixin roboto {
+  font-family: var(--font-roboto);
+}
+
+@mixin ptSans {
+  font-family: var(--font-pt-sans);
+}
