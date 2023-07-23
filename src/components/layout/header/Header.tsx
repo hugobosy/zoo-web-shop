@@ -20,7 +20,7 @@ export const Header = () => {
           <Image src={dogLogo} alt="Lakrama" width={200} height={100} />
         </div>
         <div className={styles.search}>
-          <Input placeholder={t('search-product')} />
+          <Input placeholder={t('search-product')} icon="Search" />
         </div>
         <div>
           <div>
@@ -28,10 +28,16 @@ export const Header = () => {
               variant="link"
               text={t('my-account')}
               href={PROJECT_URL.myAccount}
+              icon="User"
             />
           </div>
           <div>
-            <Button variant="link" text={t('basket')} href={'#'} />
+            <Button
+              variant="link"
+              text={t('basket')}
+              href={'#'}
+              icon="Basket"
+            />
           </div>
         </div>
       </div>

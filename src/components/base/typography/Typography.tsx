@@ -9,6 +9,7 @@ import type {
 import classNames from 'classnames';
 
 import styles from './Typography.module.scss';
+import { IconNames } from '@/components/base/icon/Icon';
 
 interface TypographyProps extends HTMLProps<HTMLParagraphElement> {
   as: As;
@@ -19,6 +20,7 @@ interface TypographyProps extends HTMLProps<HTMLParagraphElement> {
   text?: string;
   className?: string;
   isUppercase?: boolean;
+  icon?: IconNames;
 }
 
 export const Typography: FC<TypographyProps> = ({
@@ -30,6 +32,7 @@ export const Typography: FC<TypographyProps> = ({
   capitalization = 'base',
   weight = '400',
   font,
+  icon,
 }) => {
   const T = as;
   return (
@@ -43,7 +46,7 @@ export const Typography: FC<TypographyProps> = ({
         className,
       )}
     >
-      {text}
+      {icon} {text}
     </T>
   );
 };
