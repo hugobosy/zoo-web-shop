@@ -1,0 +1,14 @@
+@import "@/styles/common";
+
+.bar {
+  display: flex;
+  gap: 250px;
+  min-width: 360%;
+  padding: 8px;
+  background-color: var(--color-gray-900);
+  @include animation-bar;
+
+  p {
+    min-width: max-content;
+  }
+}

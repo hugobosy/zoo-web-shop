@@ -2,6 +2,7 @@ import styles from './Button.module.scss';
 import { FC, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
+import { Icon, IconNames } from '@/components/base/icon/Icon';
 
 interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
@@ -12,6 +13,7 @@ interface ButtonProps
   textStyle?: 'normal' | 'italic' | 'bold' | 'underline';
   href?: string;
   disabled?: boolean;
+  icon?: IconNames;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -23,6 +25,7 @@ export const Button: FC<ButtonProps> = ({
   textStyle = 'normal',
   href,
   disabled,
+  icon,
   ...rest
 }) => {
   const classes = classNames(
@@ -38,16 +41,18 @@ export const Button: FC<ButtonProps> = ({
     className: classes,
   };
 
+  const iconInner = icon && <Icon name={icon as IconNames} />;
+
   if (href) {
     return (
       <Link href={href} {...rest} {...commonProps}>
-        {text}
+        {iconInner} {text}
       </Link>
     );
   }
   return (
     <button {...rest} {...commonProps} disabled={disabled}>
-      {text}
+      {iconInner} {text}
     </button>
   );
 };

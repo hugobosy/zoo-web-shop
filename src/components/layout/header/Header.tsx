@@ -6,21 +6,20 @@ import { useTranslation } from 'next-i18next';
 import { Button } from '@/components/base/button/Button';
 import { PROJECT_URL } from '@/const/project-url';
 import { Input } from '@/components/form/input/Input';
+import { Bar } from '@/components/layout/header/bar/Bar';
 
 export const Header = () => {
   const { t } = useTranslation('header');
   return (
     <div className={styles.wrapper}>
-      <div className={styles.bar}>
-        <p>Bar</p>
-      </div>
+      <Bar />
       <div className={styles.header}>
         <div className={styles['header-logo']}>
           <Image src={nameLogo} alt="Lakrama" width={200} height={100} />
           <Image src={dogLogo} alt="Lakrama" width={200} height={100} />
         </div>
         <div className={styles.search}>
-          <Input placeholder={t('search-product')} />
+          <Input placeholder={t('search-product')} icon="Search" />
         </div>
         <div>
           <div>
@@ -28,10 +27,16 @@ export const Header = () => {
               variant="link"
               text={t('my-account')}
               href={PROJECT_URL.myAccount}
+              icon="User"
             />
           </div>
           <div>
-            <Button variant="link" text={t('basket')} href={'#'} />
+            <Button
+              variant="link"
+              text={t('basket')}
+              href={'#'}
+              icon="Basket"
+            />
           </div>
         </div>
       </div>
