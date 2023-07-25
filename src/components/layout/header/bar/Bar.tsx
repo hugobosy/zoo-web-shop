@@ -20,7 +20,13 @@ export const Bar = () => {
     <div className={styles.bar}>
       {infoBar.map((info) =>
         info.map((i: string) => (
-          <Typography as="p" text={i} capitalization="2xs" isUppercase />
+          <Typography
+            key={i}
+            as="p"
+            text={i}
+            capitalization="2xs"
+            isUppercase
+          />
         )),
       )}
     </div>
