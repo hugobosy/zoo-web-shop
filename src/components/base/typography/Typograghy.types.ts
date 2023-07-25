@@ -33,4 +33,4 @@ export type Sizes =
   | 'xl'
   | '2xl'
   | '3xl';
-export type Fonts = 'Roboto' | 'PT-Sans';
+export type Fonts = 'roboto' | 'ptSans';

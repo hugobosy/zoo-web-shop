@@ -114,6 +114,16 @@
   }
 }
 
+.font {
+  &-roboto {
+    @include roboto
+  }
+
+  &-ptSans {
+    @include ptSans
+  }
+}
+  
 .uppercase {
   text-transform: uppercase;
 }
