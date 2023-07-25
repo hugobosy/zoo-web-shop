@@ -1,9 +1,11 @@
 @import "@/styles/common";
+
 .bar {
   display: flex;
   gap: 250px;
-  width: 300%;
-  padding: 20px;
+  min-width: 360%;
+  padding: 8px;
+  background-color: var(--color-gray-900);
   @include animation-bar;
 
   p {

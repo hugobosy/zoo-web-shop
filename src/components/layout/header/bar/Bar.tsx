@@ -1,20 +1,19 @@
 import { Typography } from '@/components/base/typography/Typography';
 
 import styles from './Bar.module.scss';
+import { useTranslation } from 'next-i18next';
 
 export const Bar = () => {
+  const { t } = useTranslation('info-bar');
   const information = [
-    'Darmowa dostawa od 99zł',
-    'Promocja! Na 3 sztukę 50% rabatu',
-    'Zapisz sie do newslettera i otrzymaj 10% rabatu',
-    'Najniższe ceny',
+    t('free-shipping'),
+    t('promotion-three-packs'),
+    t('join-to-newsletter'),
+    t('to-lowest-price'),
   ];
 
   const infoBar = new Array(20);
   infoBar.fill(information);
-  infoBar.flat(2);
-
-  console.log(infoBar);
 
   return (
     <div className={styles.bar}>
@@ -26,6 +25,8 @@ export const Bar = () => {
             text={i}
             capitalization="2xs"
             isUppercase
+            color="gray-400"
+            weight="600"
           />
         )),
       )}
