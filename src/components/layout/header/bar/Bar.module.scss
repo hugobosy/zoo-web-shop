@@ -1,0 +1,12 @@
+@import "@/styles/common";
+.bar {
+  display: flex;
+  gap: 250px;
+  width: 300%;
+  padding: 20px;
+  @include animation-bar;
+
+  p {
+    min-width: max-content;
+  }
+}
