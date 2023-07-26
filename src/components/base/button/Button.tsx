@@ -9,8 +9,9 @@ interface ButtonProps
   text: string;
   variant?: 'circled' | 'outlined' | 'square' | 'link';
   color?: 'transparent' | 'red' | 'light-gray' | 'green';
-  textColor?: 'black' | 'white' | 'green' | 'red';
+  textColor?: 'black' | 'white' | 'green' | 'red' | 'gray';
   textStyle?: 'normal' | 'italic' | 'bold' | 'underline';
+  textSize?: 'xxs' | 'xs' | 's' | 'base' | 'm' | 'l' | 'xl' | 'xxl';
   href?: string;
   disabled?: boolean;
   icon?: IconNames;
@@ -26,6 +27,7 @@ export const Button: FC<ButtonProps> = ({
   href,
   disabled,
   icon,
+  textSize,
   ...rest
 }) => {
   const classes = classNames(
@@ -34,6 +36,7 @@ export const Button: FC<ButtonProps> = ({
     styles[`color-${color}`],
     styles[`textColor-${textColor}`],
     styles[`textStyle-${textStyle}`],
+    styles[`textSize-${textSize}`],
     className,
   );
 

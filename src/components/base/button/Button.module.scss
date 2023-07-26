@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 8px 18px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -13,6 +12,7 @@
 
 .variant {
   &-circled {
+
     &.color {
       &-transparent {
         background-color: transparent;
@@ -52,7 +52,9 @@
       }
     }
   }
+
   &-outlined {
+
     &.color {
       &-red {
         border: 1px solid var(--color-red);
@@ -108,6 +110,40 @@
   }
 }
 
+.textSize {
+  &-xxs {
+    @include superExtraSmall
+  }
+
+  &-xs {
+    @include extraSmall
+  }
+
+  &-s {
+    @include small
+  }
+
+  &-base {
+    @include base
+  }
+
+  &-m {
+    @include medium
+  }
+
+  &-l {
+    @include large
+  }
+
+  &-xl {
+    @include extraLarge
+  }
+
+  &-xxl {
+    @include superExtraLarge
+  }
+}
+
 .textColor {
   &-black {
     color: var(--color-black);
@@ -123,5 +159,9 @@
 
   &-green {
     color: var(--color-green);
+  }
+
+  &-gray {
+    color: var(--color-gray-300);
   }
 }
