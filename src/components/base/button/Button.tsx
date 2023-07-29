@@ -15,6 +15,7 @@ interface ButtonProps
   href?: string;
   disabled?: boolean;
   icon?: IconNames;
+  type?: 'button' | 'reset' | 'submit';
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -28,6 +29,7 @@ export const Button: FC<ButtonProps> = ({
   disabled,
   icon,
   textSize,
+  type,
   ...rest
 }) => {
   const classes = classNames(
