@@ -7,6 +7,7 @@ import type {
   Weights,
 } from '@/components/base/typography/Typograghy.types';
 import classNames from 'classnames';
+import parse from 'html-react-parser';
 
 import styles from './Typography.module.scss';
 import { Icon, IconNames } from '@/components/base/icon/Icon';
@@ -33,8 +34,12 @@ export const Typography: FC<TypographyProps> = ({
   weight = '400',
   font,
   icon,
+  children,
 }) => {
   const T = as;
+
+  const textInner = text?.toString().replace('\n', `<br>`);
+  const content = children ? children : parse(textInner || '');
   return (
     <T
       className={classNames(
@@ -46,7 +51,7 @@ export const Typography: FC<TypographyProps> = ({
         className,
       )}
     >
-      {icon && <Icon name={icon} />} {text}
+      {icon && <Icon name={icon} />} {content}
     </T>
   );
 };
