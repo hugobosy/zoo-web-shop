@@ -5,6 +5,7 @@ import { Typography } from '@/components/base/typography/Typography';
 import { useTranslation } from 'next-i18next';
 import { MenuFooter } from '@/components/layout/footer/menu/MenuFooter';
 import { NewsletterFooter } from '@/components/layout/footer/newsletter/NewsletterFooter';
+import { AboutUsFooter } from '@/components/layout/footer/aboutUs/AboutUsFooter';
 export const Footer = () => {
   const { t } = useTranslation('footer');
   return (
@@ -12,6 +13,7 @@ export const Footer = () => {
       <div className={styles.footer}>
         <MenuFooter />
         <NewsletterFooter />
+        <AboutUsFooter />
       </div>
       <div className={styles.copyright}>
         <Image src={logo} alt="LaKarma" width={60} height={50} />
