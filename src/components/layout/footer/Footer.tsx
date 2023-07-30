@@ -7,6 +7,7 @@ import { MenuFooter } from '@/components/layout/footer/menu/MenuFooter';
 import { NewsletterFooter } from '@/components/layout/footer/newsletter/NewsletterFooter';
 import { PaymentShippingFooter } from '@/components/layout/footer/payment-shipping/PaymentShippingFooter';
 import { AboutUsFooter } from '@/components/layout/footer/aboutUs/AboutUsFooter';
+import { ContactFooter } from '@/components/layout/footer/contact/ContactFooter';
 export const Footer = () => {
   const { t } = useTranslation('footer');
   return (
@@ -16,6 +17,7 @@ export const Footer = () => {
         <NewsletterFooter />
         <AboutUsFooter />
         <PaymentShippingFooter />
+        <ContactFooter />
       </div>
       <div className={styles.copyright}>
         <Image src={logo} alt="LaKarma" width={60} height={50} />
