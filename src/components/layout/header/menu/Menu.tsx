@@ -3,6 +3,10 @@ import { useTranslation } from 'next-i18next';
 import { PROJECT_URL } from '@/const/project-url';
 import { Button } from '@/components/base/button/Button';
 
+import dog1 from '@/assets/image/dog1.png';
+import dog2 from '@/assets/image/dog2.png';
+import Image from 'next/image';
+
 export const Menu = () => {
   const { t } = useTranslation('menu');
 
@@ -10,6 +14,10 @@ export const Menu = () => {
     {
       text: t('for-dog'),
       link: PROJECT_URL.menu.forDog,
+      images: [
+        { alt: 'Dog1', src: dog1 },
+        { alt: 'Dog2', src: dog2 },
+      ],
       items: [
         {
           text: 'Karmy dla psa',
@@ -106,7 +114,11 @@ export const Menu = () => {
                     </li>
                   ))}
                 </div>
-                <div></div>
+                <div className={styles.content}>
+                  {i.images?.map((img) => (
+                    <Image src={img.src} alt={img.alt} />
+                  ))}
+                </div>
               </ul>
             )}
           </li>
