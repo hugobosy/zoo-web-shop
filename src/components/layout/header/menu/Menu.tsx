@@ -116,7 +116,7 @@ export const Menu = () => {
                 </div>
                 <div className={styles.content}>
                   {i.images?.map((img) => (
-                    <Image src={img.src} alt={img.alt} />
+                    <Image key={img.alt} src={img.src} alt={img.alt} />
                   ))}
                 </div>
               </ul>
