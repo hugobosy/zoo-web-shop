@@ -1,0 +1,104 @@
+@import "@/styles/common";
+
+.wrapper {
+  width: 100%;
+  background-color: var(--color-gray-900);
+}
+
+.menu {
+  @include center;
+  display: flex;
+  justify-content: space-around;
+
+  &-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &:hover .menu-lv1{
+      display: flex;
+    }
+
+    &:hover .link {
+      background-color: var(--color-white);
+      text-decoration: underline;
+      border-right: 1px solid var(--color-gray-800);
+      border-left: 1px solid var(--color-gray-800);
+    }
+
+    &:last-child {
+      .link {
+        position: relative;
+        font-weight: 600;
+        background-color: var(--color-red);
+      }
+    }
+  }
+
+  &-lv1 {
+    display: none;
+    position: absolute;
+    gap: 50px;
+    left: 0;
+    top: 100%;
+    padding: 50px 20px;
+    width: max-content;
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-gray-800);
+    border-left: 1px solid var(--color-gray-800);
+    transform: translateY(-1px);
+    z-index: 2;
+    box-shadow: 3px 3px 10px var(--color-gray-800);
+
+    &-items {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 5px 0;
+        @include roboto;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        border-radius: 0;
+
+        &:hover {
+          border-top: 1px solid var(--color-gray-800);
+          border-bottom: 1px solid var(--color-gray-800);
+        }
+      }
+    }
+  }
+
+  &-lv2 {
+    display: none;
+
+  }
+
+}
+
+.link {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  text-transform: uppercase;
+  font-family: var(--font-roboto);
+  width: max-content;
+  border-radius: 0;
+  border: 1px solid transparent;
+  z-index: 10;
+
+  &:hover:not(:last-child) {
+    background-color: var(--color-white);
+    text-decoration: underline;
+    border-right: 1px solid var(--color-gray-800);
+    border-left: 1px solid var(--color-gray-800);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}

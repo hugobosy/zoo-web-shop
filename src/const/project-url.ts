@@ -11,4 +11,16 @@ export const PROJECT_URL = {
     cookiesPolicy: '/polityka-plikow-cookies',
     faq: '/faq',
   },
+
+  menu: {
+    forDog: '/dla-psa',
+    fotCat: '/dla-kota',
+    smallMammal: '/male-ssaki',
+    birds: '/ptaki',
+    topBrand: '/top-marki',
+    sale: '/promocje',
+    pharmacy: '/apteka',
+    blog: '/blog',
+    treat: '/gratka',
+  },
 };

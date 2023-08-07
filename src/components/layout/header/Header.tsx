@@ -7,6 +7,7 @@ import { Button } from '@/components/base/button/Button';
 import { PROJECT_URL } from '@/const/project-url';
 import { Input } from '@/components/form/input/Input';
 import { Bar } from '@/components/layout/header/bar/Bar';
+import { Menu } from '@/components/layout/header/menu/Menu';
 
 export const Header = () => {
   const { t } = useTranslation('header');
@@ -40,9 +41,7 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <div className={styles.menu}>
-        <p>Menu</p>
-      </div>
+      <Menu />
     </div>
   );
 };
