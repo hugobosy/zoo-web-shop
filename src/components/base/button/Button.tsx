@@ -15,6 +15,7 @@ interface ButtonProps
   href?: string;
   disabled?: boolean;
   icon?: IconNames;
+  iconPosition?: 'left' | 'right';
   type?: 'button' | 'reset' | 'submit';
 }
 
@@ -30,6 +31,7 @@ export const Button: FC<ButtonProps> = ({
   icon,
   textSize,
   type,
+  iconPosition = 'left',
   ...rest
 }) => {
   const classes = classNames(
@@ -51,13 +53,35 @@ export const Button: FC<ButtonProps> = ({
   if (href) {
     return (
       <Link href={href} {...rest} {...commonProps}>
-        {iconInner} {text}
+        {iconPosition === 'left' && (
+          <>
+            {iconInner}
+            {text}
+          </>
+        )}
+        {iconPosition === 'right' && (
+          <>
+            {text}
+            {iconInner}
+          </>
+        )}
       </Link>
     );
   }
   return (
     <button {...rest} {...commonProps} disabled={disabled}>
-      {iconInner} {text}
+      {iconPosition === 'left' && (
+        <>
+          {iconInner}
+          {text}
+        </>
+      )}
+      {iconPosition === 'right' && (
+        <>
+          {text}
+          {iconInner}
+        </>
+      )}
     </button>
   );
 };

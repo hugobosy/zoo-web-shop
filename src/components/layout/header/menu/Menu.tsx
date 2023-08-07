@@ -1,7 +1,6 @@
 import styles from './Menu.module.scss';
 import { useTranslation } from 'next-i18next';
 import { PROJECT_URL } from '@/const/project-url';
-import Link from 'next/link';
 import { Button } from '@/components/base/button/Button';
 
 export const Menu = () => {
@@ -12,7 +11,23 @@ export const Menu = () => {
       text: t('for-dog'),
       link: PROJECT_URL.menu.forDog,
       items: [
-        { text: 'Karmy dla psa', link: '#', items: [] },
+        {
+          text: 'Karmy dla psa',
+          link: '#',
+          items: [
+            { text: 'Karmy suche dla psa', link: '#' },
+            { text: 'Karmy mokre dla psa', link: '#' },
+            { text: 'Karmy weterynaryjne dla psa', link: '#' },
+            { text: 'Karmy według wieku psa', link: '#' },
+            { text: 'Karmy według wagi psa', link: '#' },
+            { text: 'Karmy według rasy psa', link: '#' },
+            { text: 'Karmy bezzbożowe dla psa', link: '#' },
+            { text: 'Karmy hipoalergiczne dla psa', link: '#' },
+            { text: 'Karmy monobiałkowe dla psa', link: '#' },
+            { text: 'Karmy według producenta', link: '#' },
+            { text: 'Zobacz wszystkie', link: '#' },
+          ],
+        },
         { text: 'Przysmaki dla psa', link: '#', items: [] },
         { text: 'Zabawki dla psa', link: '#', items: [] },
         { text: 'Legowiska, budki dla psa', link: '#', items: [] },
@@ -64,12 +79,34 @@ export const Menu = () => {
               className={styles.link}
             />
             {i.items && (
-              <ul>
-                {i.items.map((j) => (
-                  <li key={j.text}>
-                    <Button text={j.text} href={j.link} />
-                  </li>
-                ))}
+              <ul className={styles['menu-lv1']}>
+                <div className={styles['menu-lv1-items']}>
+                  {i.items.map((j) => (
+                    <li key={j.text} className={styles['menu-lv1-item']}>
+                      <Button
+                        text={j.text}
+                        href={j.link}
+                        icon="ArrowRight"
+                        iconPosition="right"
+                        textSize="s"
+                        textColor="gray"
+                      />
+                      {j.items && (
+                        <ul className={styles['menu-lv2']}>
+                          {j.items.map((k) => (
+                            <li
+                              key={k.text}
+                              className={styles['menu-lv2-item']}
+                            >
+                              <Button text={k.text} href={k.link} />
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </div>
+                <div></div>
               </ul>
             )}
           </li>
