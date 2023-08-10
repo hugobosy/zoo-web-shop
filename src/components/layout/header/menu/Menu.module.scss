@@ -69,12 +69,25 @@
           border-bottom: 1px solid var(--color-gray-800);
         }
       }
+
+    }
+
+    &-item {
+      &:hover .menu-lv2 {
+        display: block;
+      }
     }
   }
 
   &-lv2 {
     display: none;
-
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--color-white);
+    //transform: translateX(-50%);
+    padding: 50px 50px;
+    z-index: 1;
   }
 
 }

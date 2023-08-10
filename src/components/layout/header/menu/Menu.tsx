@@ -5,6 +5,10 @@ import { Button } from '@/components/base/button/Button';
 
 import dog1 from '@/assets/image/dog1.png';
 import dog2 from '@/assets/image/dog2.png';
+import cat1 from '@/assets/image/cat1.png';
+import cat2 from '@/assets/image/cat2.png';
+import mammal1 from '@/assets/image/mammal1.png';
+import mammal2 from '@/assets/image/mammal2.png';
 import Image from 'next/image';
 
 export const Menu = () => {
@@ -51,6 +55,10 @@ export const Menu = () => {
     {
       text: t('for-cat'),
       link: PROJECT_URL.menu.fotCat,
+      images: [
+        { alt: 'Cat1', src: cat1 },
+        { alt: 'Cat2', src: cat2 },
+      ],
       items: [
         { text: 'Karmy dla kota', link: '#', items: [] },
         { text: 'Przysmaki dla kota', link: '#', items: [] },
@@ -65,7 +73,15 @@ export const Menu = () => {
         { text: 'Preparaty lecznicze, suplementy', link: '#', items: [] },
       ],
     },
-    { text: t('small-mammal'), link: PROJECT_URL.menu.smallMammal, items: [] },
+    {
+      text: t('small-mammal'),
+      link: PROJECT_URL.menu.smallMammal,
+      images: [
+        { alt: 'Mammal1', src: mammal1 },
+        { alt: 'Mammal2', src: mammal2 },
+      ],
+      items: [],
+    },
     { text: t('birds'), link: PROJECT_URL.menu.birds, items: [] },
     { text: t('top-brand'), link: PROJECT_URL.menu.topBrand, items: [] },
     { text: t('sale'), link: PROJECT_URL.menu.sale, items: [] },
@@ -106,7 +122,12 @@ export const Menu = () => {
                               key={k.text}
                               className={styles['menu-lv2-item']}
                             >
-                              <Button text={k.text} href={k.link} />
+                              <Button
+                                text={k.text}
+                                href={k.link}
+                                textSize="s"
+                                textColor="gray"
+                              />
                             </li>
                           ))}
                         </ul>
