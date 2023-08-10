@@ -22,3 +22,10 @@
 .search {
   flex: 1
 }
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  font-family: var(--font-pt-sans);
+  text-transform: uppercase;
+}
