@@ -22,13 +22,15 @@ export const Header = () => {
         <div className={styles.search}>
           <Input placeholder={t('search-product')} icon="Search" />
         </div>
-        <div>
+        <div className={styles.buttons}>
           <div>
             <Button
               variant="link"
               text={t('my-account')}
               href={PROJECT_URL.myAccount}
               icon="User"
+              textColor="gray"
+              textSize="m"
             />
           </div>
           <div>
@@ -37,6 +39,8 @@ export const Header = () => {
               text={t('basket')}
               href={'#'}
               icon="Basket"
+              textColor="gray"
+              textSize="m"
             />
           </div>
         </div>
