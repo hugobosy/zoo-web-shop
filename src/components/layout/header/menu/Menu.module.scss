@@ -53,6 +53,7 @@
     &-items {
       display: flex;
       flex-direction: column;
+      z-index: 2;
 
       a {
         display: flex;
@@ -69,12 +70,29 @@
           border-bottom: 1px solid var(--color-gray-800);
         }
       }
+
+    }
+
+    &-item {
+      &:hover .menu-lv2 {
+        display: flex;
+        z-index: 0;
+      }
     }
   }
 
   &-lv2 {
     display: none;
-
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 52.5%;
+    height: 100%;
+    right: 0;
+    background-color: var(--color-white);
+    padding-left: 50px;
+    z-index: 0;
   }
 
 }
