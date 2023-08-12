@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 import { Button } from '@/components/base/button/Button';
 
 import Image from 'next/image';
-import { menuConst } from '@/components/layout/header/menu/menu.const';
+import { MenuConst } from '@/components/layout/header/menu/menu.const';
 
 export const Menu = () => {
   const { t } = useTranslation('menu');
@@ -11,7 +11,7 @@ export const Menu = () => {
   return (
     <div className={styles.wrapper}>
       <ul className={styles.menu}>
-        {menuConst().map((i) => (
+        {MenuConst().map((i) => (
           <li key={i.text} className={styles['menu-item']}>
             <Button
               text={i.text}

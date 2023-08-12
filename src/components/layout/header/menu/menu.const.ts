@@ -7,7 +7,7 @@ import cat2 from '@/assets/image/cat2.png';
 import mammal1 from '@/assets/image/mammal1.png';
 import mammal2 from '@/assets/image/mammal2.png';
 
-export const menuConst = () => {
+export const MenuConst = () => {
   const { t } = useTranslation('menu');
   return [
     {
