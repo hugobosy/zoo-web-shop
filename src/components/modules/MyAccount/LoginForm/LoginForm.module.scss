@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 250px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.reminder {
+  display: flex;
+  justify-content: center;
+}
