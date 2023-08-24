@@ -1,4 +1,5 @@
 import styles from './RegisterForm.module.scss';
+
 export const RegisterForm = () => {
-  return <h1>RegisterForm</h1>;
+  return <h1>Register form</h1>;
 };

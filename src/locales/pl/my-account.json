@@ -3,5 +3,11 @@
   "login": "Zaloguj się",
   "email": "E-mail",
   "password": "Hasło",
-  "forgot-password": "Zapomniałeś hasła?"
+  "forgot-password": "Zapomniałeś hasła?",
+  "no-account": "Nie masz konta?",
+  "registration-benefits": "Korzyści z rejestracji",
+  "fast-shipping": "szybkie zakupy",
+  "order-history": "dostęp do historii zamówień",
+  "billing-for-clients": "promocje dla stałych klientów",
+  "create-account": "Utwórz konto"
 }
